@@ -38,7 +38,7 @@ export default function FinalCTA() {
         {/* Two prominent CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
           <Link
-            href="/signup"
+            href="/studio"
             className="w-full sm:w-auto group inline-flex items-center justify-center px-9 py-4 bg-[#F9F8F6] text-[#0B0B0C] text-xs uppercase tracking-[0.18em] font-sans font-medium transition-all duration-300 hover:bg-[#C5A880] hover:text-[#0B0B0C] border border-[#F9F8F6]"
           >
             <span>Create Your First Design</span>

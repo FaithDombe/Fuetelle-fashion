@@ -44,7 +44,7 @@ export default function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5 mb-10">
               <Link
-                href="/signup"
+                href="/studio"
                 className="group inline-flex items-center justify-center px-8 py-4 bg-[#0B0B0C] text-[#F9F8F6] text-xs uppercase tracking-[0.18em] font-sans font-medium transition-all duration-300 hover:bg-[#66645F] border border-[#0B0B0C] hover:border-[#66645F] shadow-sm"
               >
                 <span>Design Your Outfit</span>

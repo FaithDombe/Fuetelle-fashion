@@ -58,7 +58,7 @@ export default function CustomerSection() {
             {/* CTA */}
             <div>
               <Link
-                href="/signup"
+                href="/studio"
                 className="group inline-flex items-center justify-center px-8 py-4 bg-[#0B0B0C] text-[#F9F8F6] text-xs uppercase tracking-[0.18em] font-sans font-medium transition-all duration-300 hover:bg-[#66645F] border border-[#0B0B0C] shadow-sm"
               >
                 <span>Start Designing</span>

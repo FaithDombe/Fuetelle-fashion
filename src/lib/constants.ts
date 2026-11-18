@@ -4,10 +4,11 @@ export interface NavItem {
 }
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Explore Designs", href: "#showcase" },
-  { label: "For Designers", href: "#designers" },
-  { label: "For Tailors", href: "#tailors" },
+  { label: "AI Studio", href: "/studio" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Explore Designs", href: "/#showcase" },
+  { label: "For Designers", href: "/#designers" },
+  { label: "For Tailors", href: "/#tailors" },
 ];
 
 export interface WalkthroughStep {
