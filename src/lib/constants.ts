@@ -24,47 +24,47 @@ export interface WalkthroughStep {
 export const WALKTHROUGH_STEPS: WalkthroughStep[] = [
   {
     number: "01",
-    label: "Share Your Vision",
-    title: "Start With an Idea.",
+    label: "Prompt Your Vision",
+    title: "Describe Your Dream Garment.",
     description:
-      "Capture your inspiration through fabric photos (Aso-Oke, lace, wool, or brocade), voice notes, or sketches. Tell us how you want your outfit to look and feel.",
+      "Type what you want to wear in plain English: mention your desired Agbada cut, Aso-Ebi silhouette, embroidery motif, or preferred Nigerian textile.",
     imageUrl:
       "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&q=80&w=900",
-    imageAlt: "Textile swatches, Aso-Oke weaves and creative mood board in a Lagos design atelier",
-    tag: "Fabric & Moodboard",
+    imageAlt: "Authentic Nigerian fabric swatches, Aso-Oke weaves and design moodboard",
+    tag: "Creative Prompt",
   },
   {
     number: "02",
-    label: "Visualise Your Design",
-    title: "See Your Concept Alive.",
+    label: "AI Generates Your Sketch",
+    title: "A Couture Sketch is Drawn.",
     description:
-      "Our AI engine transforms your creative input into photo-realistic Nigerian fashion concepts. Explore variations in Agbada embroidery, Senator collars, or Aso-Ebi corsetry.",
+      "Our AI translates your description into a technical fashion croquis sketch with stitch schematics, measurement callouts, and fabric recommendations.",
     imageUrl:
-      "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=900",
-    imageAlt: "AI-assisted digital fashion silhouettes and African couture concepts",
-    tag: "Generative Silhouettes",
+      "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=900",
+    imageAlt: "Fashion designer drafting an architectural fashion croquis sketch on paper",
+    tag: "AI Fashion Sketch",
   },
   {
     number: "03",
     label: "Refine With Designers",
     title: "Engineered With Precision.",
     description:
-      "Top Nigerian fashion designers and patternmakers refine your silhouette, draft exact component measurements, and generate production-grade tech packs.",
+      "Top Nigerian fashion designers review your sketch, refine the garment components, and generate production-ready tech packs for master tailors.",
     imageUrl:
-      "https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&q=80&w=900",
-    imageAlt: "Fashion designer drafting technical garment patterns and measurements in an atelier",
-    tag: "Technical Specification",
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=900",
+    imageAlt: "African fashion designer drafting technical garment patterns and specifications in studio",
+    tag: "Technical Tech Pack",
   },
   {
     number: "04",
     label: "Crafted by Master Tailors",
-    title: "Made by Skilled Hands.",
+    title: "Brought to Life by Skilled Hands.",
     description:
-      "Connect with vetted master tailors across Lagos, Abuja, and nationwide. Review itemised quotations in Naira, approve milestones, and receive your finished bespoke garment.",
+      "Vetted Nigerian master tailors review your sketch and tech pack, submit itemised Naira bids, and sew your bespoke garment under protected milestone escrow.",
     imageUrl:
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&q=80&w=900",
-    imageAlt: "Master tailor in bespoke Nigerian atelier crafting luxury tailored garment",
-    tag: "Atelier Craftsmanship",
+      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=900",
+    imageAlt: "Bespoke tailor working with measuring tape and fine fabric in tailor atelier",
+    tag: "Master Atelier Craft",
   },
 ];
 
@@ -146,7 +146,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     description:
       "A contemporary reimagining of Igbo ceremonial velvet. Tailored as a modern double-breasted evening jacket with peak lapels and matte gold crest buttons.",
     imageUrl:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=900",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=900",
     fabric: "High-Density Velvet with Lion Crest Filigree",
     silhouette: "Neapolitan Cut Double-Breasted Jacket",
     craftingTime: "24 atelier hours",
@@ -199,9 +199,9 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
 
 export const CUSTOMER_FEATURES = [
   {
-    title: "AI Concept Generation for Nigerian Styles",
+    title: "Prompt-to-Sketch AI Generator",
     description:
-      "Explore embroidery motifs, necklines, and silhouettes tailored to Agbadas, Senator suits, and Aso-Ebi.",
+      "Type your dream outfit description in plain English and watch our AI draft a detailed fashion sketch with embroidery schematics in seconds.",
   },
   {
     title: "Authentic Nigerian Fabric Verification",
@@ -216,7 +216,7 @@ export const CUSTOMER_FEATURES = [
   {
     title: "Transparent Itemised Naira Quotations",
     description:
-      "Receive detailed breakdowns covering fabric grade, embroidery complexity, tailoring labor, and delivery.",
+      "Receive detailed breakdowns covering fabric grade, embroidery complexity, tailoring labor, and delivery in Naira.",
   },
   {
     title: "Milestone Photo Updates",
@@ -267,7 +267,7 @@ export const TAILOR_FEATURES = [
   {
     title: "Verified Nigerian Design Requests",
     description:
-      "Access a steady stream of verified customer briefs with complete visual tech packs ready for production.",
+      "Access a steady stream of verified customer briefs with complete visual tech packs and sketches ready for production.",
   },
   {
     title: "Structured Naira Quotation Builder",

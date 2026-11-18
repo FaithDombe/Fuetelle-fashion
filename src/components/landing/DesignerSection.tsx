@@ -21,8 +21,8 @@ export default function DesignerSection() {
           <div className="lg:col-span-6 order-2 lg:order-1">
             <div className="relative aspect-[4/5] w-full max-w-md mx-auto lg:max-w-none overflow-hidden bg-[#1a1a1a] border border-white/10 shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&q=80&w=1200"
-                alt="Nigerian fashion designer's studio desk with sketches, technical pattern sheets, and fabric swatches"
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1200"
+                alt="African fashion designer sketching and drafting technical patterns in Lagos atelier"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center transition-transform duration-700 ease-out hover:scale-105"

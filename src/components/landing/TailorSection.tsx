@@ -70,8 +70,8 @@ export default function TailorSection() {
           <div className="lg:col-span-6">
             <div className="relative aspect-[4/5] w-full max-w-md mx-auto lg:max-w-none overflow-hidden bg-[#F0EDE7] border border-[#E5E2DC] shadow-lg">
               <Image
-                src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&q=80&w=1200"
-                alt="Master tailor crafting a bespoke tailored jacket in Nigerian atelier"
+                src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=1200"
+                alt="Master tailor crafting a bespoke tailored garment in Nigerian atelier"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center transition-transform duration-700 ease-out hover:scale-105"
