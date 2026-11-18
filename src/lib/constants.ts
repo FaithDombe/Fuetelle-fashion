@@ -5,6 +5,7 @@ export interface NavItem {
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "AI Studio", href: "/studio" },
+  { label: "Wardrobe Vault", href: "/wardrobe" },
   { label: "How It Works", href: "/#how-it-works" },
   { label: "Explore Designs", href: "/#showcase" },
   { label: "For Designers", href: "/#designers" },

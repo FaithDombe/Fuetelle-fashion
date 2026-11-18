@@ -1,0 +1,212 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// -------------------------------------------------------------
+// USER & STYLE PROFILE (TASTE DNA)
+// -------------------------------------------------------------
+
+enum UserRole {
+  CLIENT
+  DESIGNER
+  TAILOR
+  ADMIN
+}
+
+model User {
+  id              String           @id @default(cuid())
+  email           String           @unique
+  name            String?
+  avatarUrl       String?
+  role            UserRole         @default(CLIENT)
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  styleProfile    StyleProfile?
+  sessions        DesignSession[]
+  designs         GeneratedDesign[]
+  feedbacks       DesignFeedback[]
+  savedLooks      SavedLook[]
+
+  @@map("users")
+}
+
+model StyleProfile {
+  id                  String   @id @default(cuid())
+  userId              String   @unique
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Fit & Proportions
+  bodyType            String?  // e.g., "Hourglass", "Broad Shoulder / Athletic", "Tall & Slim", "Curved"
+  measurements        Json?    // { chest: 40, waist: 34, hips: 42, inseam: 32, shoulderSpan: 19, agbadaSpan: 62, unit: "in" }
+  
+  // Style Preferences & Vectors
+  preferredAesthetics String[] // ["Ceremonial Agbada", "Minimalist Tailoring", "Aso-Ebi Glamour", "Modern Senator"]
+  preferredFabrics    String[] // ["Iseyin Aso-Oke", "Austrian Getzner Brocade", "Raw Silk", "Cashmere Wool"]
+  preferredColors     String[] // ["#0F2D1F" (Emerald), "#C5A059" (Gold), "#0B0B0C" (Obsidian), "#FFFFFF"]
+  avoidedColors       String[] // e.g., ["#FFFF00" (Neon Yellow), "#FF69B4"]
+  avoidedCuts         String[] // e.g., ["Ultra-Skinny", "Low Rise", "Puff Sleeves"]
+  
+  // Dynamic Taste DNA Vector
+  // Stores weighted scoring map: { "agbada": 12, "emerald": 8, "gold": 10, "aso-oke": 15, "chiffon": -4 }
+  styleDnaVector      Json?    
+  aiMatchScore        Float    @default(78.5) // Live taste calibration score 0.0 - 100.0%
+  totalFeedbackCount  Int      @default(0)
+
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@map("style_profiles")
+}
+
+// -------------------------------------------------------------
+// DESIGN SESSIONS & ITERATIVE GENERATIONS
+// -------------------------------------------------------------
+
+model DesignSession {
+  id            String            @id @default(cuid())
+  userId        String?
+  user          User?             @relation(fields: [userId], references: [id], onDelete: SetNull)
+  title         String            @default("Untitled Haute Couture Concept")
+  occasion      String?           // "Red Carpet", "Traditional / Bespoke Wedding", "Corporate Chic", "Resort"
+  silhouette    String?           // "Grand Agbada", "Structured Tailored Suit", "Corseted Mermaid", "A-Line"
+  fabric        String?           // "Handwoven Aso-Oke", "Getzner Brocade", "Italian Wool"
+  colorPalette  String[]          // Array of Hex colors
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+
+  designs       GeneratedDesign[]
+
+  @@map("design_sessions")
+}
+
+model GeneratedDesign {
+  id                 String          @id @default(cuid())
+  sessionId          String?
+  session            DesignSession?  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  userId             String?
+  user               User?           @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  // Iteration tracking
+  refinedFromId      String?
+  parentDesign       GeneratedDesign? @relation("DesignIterations", fields: [refinedFromId], references: [id], onDelete: SetNull)
+  childIterations    GeneratedDesign[] @relation("DesignIterations")
+  iterationVersion   Int             @default(1)
+
+  // Creative Brief & Inputs
+  prompt             String          // Natural language prompt
+  curatedOccasion    String?
+  curatedSilhouette  String?
+  curatedFabric      String?
+  curatedColorHex    String?
+
+  // Multimodal References
+  referenceImageUrls String[]        // Uploaded reference URLs
+  referenceTags      Json?           // Array of { url: string, tag: "Fabric" | "Silhouette" | "Model" }
+
+  // Visual Outputs
+  generatedImageUrl  String          // High-resolution atelier model render
+  croquisSketchSvg   String?         // SVG / vector fashion croquis technical drawing
+
+  // Technical Specs & AI Stylist Breakdown
+  techPackJson       Json            // { yardageEstimate, constructionNotes, stitchDensity, stylingPairings, accessories, nairaEstimate }
+  generationParams   Json?           // Full snapshot of hyperparameters and style DNA injected
+
+  createdAt          DateTime        @default(now())
+  updatedAt          DateTime        @updatedAt
+
+  feedback           DesignFeedback?
+  trainingSample     TrainingSample?
+  savedLooks         SavedLook[]
+
+  @@map("generated_designs")
+}
+
+// -------------------------------------------------------------
+// SELF-IMPROVING FEEDBACK LOOP & TASTE TRAINING
+// -------------------------------------------------------------
+
+enum FeedbackRating {
+  LOVE
+  DISLIKE
+  SAVED
+}
+
+model DesignFeedback {
+  id                   String           @id @default(cuid())
+  designId             String           @unique
+  design               GeneratedDesign  @relation(fields: [designId], references: [id], onDelete: Cascade)
+  userId               String?
+  user                 User?            @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  rating               FeedbackRating
+  rejectionReasons     String[]         // ["Wrong Silhouette", "Color Clash", "Too Casual", "Poor Fit", "Fabric Dislike"]
+  attributeVotes       Json?            // { color: 1 | -1, silhouette: 1 | -1, fabric: 1 | -1 }
+  clientNotes          String?
+
+  isFlaggedForTraining Boolean          @default(false)
+  createdAt            DateTime         @default(now())
+
+  @@map("design_feedbacks")
+}
+
+model TrainingSample {
+  id                 String           @id @default(cuid())
+  designId           String           @unique
+  design             GeneratedDesign  @relation(fields: [designId], references: [id], onDelete: Cascade)
+
+  prompt             String
+  styleTags          String[]
+  referenceImageUrls String[]
+  approvedImageUrl   String
+  techPackSummary    String
+  qualityScore       Float            @default(1.0)
+  isExported         Boolean          @default(false)
+  createdAt          DateTime         @default(now())
+
+  @@map("training_samples")
+}
+
+// -------------------------------------------------------------
+// WARDROBE VAULT & SMART GARMENT CATALOG
+// -------------------------------------------------------------
+
+model SavedLook {
+  id          String          @id @default(cuid())
+  userId      String
+  user        User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  designId    String
+  design      GeneratedDesign @relation(fields: [designId], references: [id], onDelete: Cascade)
+  collection  String          @default("Harmattan / Resort 2026")
+  notes       String?
+  createdAt   DateTime        @default(now())
+
+  @@unique([userId, designId])
+  @@map("saved_looks")
+}
+
+model CatalogGarment {
+  id              String   @id @default(cuid())
+  name            String
+  brand           String   // e.g. "Deola Sagoe", "Agbada Imperial Lagos", "Orange Culture", "Mai Atafo"
+  category        String   // "Agbada", "Senator Suit", "Aso-Ebi Gown", "Bespoke Suit", "Kaftan", "Isi-Agu"
+  silhouette      String   // "A-Line", "Tailored", "Draped", "Structured", "Grand Volume"
+  fabric          String   // "Aso-Oke", "Getzner Brocade", "Italian Super 160s", "Solstiss Lace"
+  colorHex        String
+  priceNaira      Float
+  priceUsd        Float
+  imageUrl        String
+  productUrl      String
+  tags            String[] // ["Formal", "Traditional", "Ceremonial", "Lagos Fashion Week"]
+  createdAt       DateTime @default(now())
+
+  @@map("catalog_garments")
+}
