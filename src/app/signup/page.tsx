@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, Sparkles } from "lucide-react";
+import { ArrowLeft, Sparkles, MapPin } from "lucide-react";
 
 export default function SignupPage() {
   return (
@@ -8,7 +8,7 @@ export default function SignupPage() {
         <div className="inline-flex items-center space-x-2 text-[#C5A880] mb-6">
           <Sparkles className="w-4 h-4" />
           <span className="text-[11px] uppercase tracking-[0.25em] font-medium">
-            FUETELLE ATELIER
+            FUETELLE NIGERIA ATELIER
           </span>
         </div>
 
@@ -16,18 +16,31 @@ export default function SignupPage() {
           Private Access & Registration
         </h1>
 
-        <p className="text-xs sm:text-sm text-[#66645F] leading-relaxed mb-8">
-          The bespoke client, designer studio, and master tailor onboarding is
-          currently in private preview. Public onboarding opens shortly.
+        <p className="text-xs sm:text-sm text-[#66645F] leading-relaxed mb-6">
+          Onboarding for Nigerian clients, verified fashion houses, and master
+          tailor guilds across Lagos, Abuja, and nationwide is currently in private preview.
         </p>
 
-        <Link
-          href="/"
-          className="inline-flex items-center justify-center px-6 py-3 bg-[#0B0B0C] text-[#F9F8F6] text-xs uppercase tracking-[0.16em] font-medium hover:bg-[#66645F] transition-colors"
-        >
-          <ArrowLeft className="mr-2 w-3.5 h-3.5" />
-          <span>Return to Homepage</span>
-        </Link>
+        <div className="inline-flex items-center space-x-1.5 text-xs text-[#236B4A] mb-8 bg-[#236B4A]/10 px-3 py-1 font-medium">
+          <MapPin className="w-3.5 h-3.5" />
+          <span>Lagos &bull; Abuja &bull; Port Harcourt &bull; Diaspora</span>
+        </div>
+
+        <div className="flex flex-col space-y-3">
+          <Link
+            href="/studio"
+            className="inline-flex items-center justify-center px-6 py-3.5 bg-[#0B0B0C] text-[#F9F8F6] text-xs uppercase tracking-[0.16em] font-medium hover:bg-[#66645F] transition-colors"
+          >
+            <span>Try AI Design Studio Free &rarr;</span>
+          </Link>
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center px-6 py-2.5 border border-[#E5E2DC] text-[#0B0B0C] text-xs uppercase tracking-[0.16em] font-medium hover:bg-[#F0EDE7] transition-colors"
+          >
+            <ArrowLeft className="mr-2 w-3.5 h-3.5" />
+            <span>Return to Homepage</span>
+          </Link>
+        </div>
       </div>
     </div>
   );

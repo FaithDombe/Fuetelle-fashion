@@ -27,55 +27,55 @@ export const WALKTHROUGH_STEPS: WalkthroughStep[] = [
     label: "Share Your Vision",
     title: "Start With an Idea.",
     description:
-      "Capture your inspiration through fabric photographs, sketches, voice notes, or written descriptions. Tell us what you want to wear and how you want it to feel.",
+      "Capture your inspiration through fabric photos (Aso-Oke, lace, wool, or brocade), voice notes, or sketches. Tell us how you want your outfit to look and feel.",
     imageUrl:
       "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&q=80&w=900",
-    imageAlt: "Textile swatches and creative mood board in a design atelier",
-    tag: "Inspiration & Mood",
+    imageAlt: "Textile swatches, Aso-Oke weaves and creative mood board in a Lagos design atelier",
+    tag: "Fabric & Moodboard",
   },
   {
     number: "02",
     label: "Visualise Your Design",
-    title: "See Your Idea Come Alive.",
+    title: "See Your Concept Alive.",
     description:
-      "AI transforms your creative input into visual fashion concepts. Explore different silhouettes, details, and design variations before production begins.",
+      "Our AI engine transforms your creative input into photo-realistic Nigerian fashion concepts. Explore variations in Agbada embroidery, Senator collars, or Aso-Ebi corsetry.",
     imageUrl:
-      "https://images.unsplash.com/photo-1537832816519-689ad163238b?auto=format&fit=crop&q=80&w=900",
-    imageAlt: "AI-assisted digital garment silhouettes and concept iterations",
+      "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=900",
+    imageAlt: "AI-assisted digital fashion silhouettes and African couture concepts",
     tag: "Generative Silhouettes",
   },
   {
     number: "03",
-    label: "Refine With Professionals",
-    title: "Designed With Precision.",
+    label: "Refine With Designers",
+    title: "Engineered With Precision.",
     description:
-      "Professional designers refine your concept, develop garment components, and prepare technical specifications to support production.",
+      "Top Nigerian fashion designers and patternmakers refine your silhouette, draft exact component measurements, and generate production-grade tech packs.",
     imageUrl:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=900",
-    imageAlt: "Fashion designer drafting technical garment patterns and measurements",
+      "https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&q=80&w=900",
+    imageAlt: "Fashion designer drafting technical garment patterns and measurements in an atelier",
     tag: "Technical Specification",
   },
   {
     number: "04",
-    label: "Bring It to Life",
+    label: "Crafted by Master Tailors",
     title: "Made by Skilled Hands.",
     description:
-      "Connect with participating tailors, review quotations, commission production, and follow your garment from cutting to delivery.",
+      "Connect with vetted master tailors across Lagos, Abuja, and nationwide. Review itemised quotations in Naira, approve milestones, and receive your finished bespoke garment.",
     imageUrl:
-      "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&q=80&w=900",
-    imageAlt: "Master tailor in traditional bespoke tailoring atelier crafting a garment",
+      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&q=80&w=900",
+    imageAlt: "Master tailor in bespoke Nigerian atelier crafting luxury tailored garment",
     tag: "Atelier Craftsmanship",
   },
 ];
 
 export const SHOWCASE_CATEGORIES = [
   "All",
-  "Contemporary Menswear",
-  "Elegant Womenswear",
-  "Traditional & Cultural Wear",
-  "Modern Streetwear",
-  "Bespoke Tailoring",
-  "Evening & Occasion Wear",
+  "Ceremonial Agbada",
+  "Contemporary Senator Suits",
+  "Couture Aso-Ebi & Gowns",
+  "Modern Afro-Contemporary",
+  "Bespoke Suiting",
+  "Luxury Kaftans",
 ] as const;
 
 export type ShowcaseCategory = (typeof SHOWCASE_CATEGORIES)[number];
@@ -89,259 +89,267 @@ export interface ShowcaseItem {
   fabric: string;
   silhouette: string;
   craftingTime: string;
+  priceEstimate: string;
   atelierNote: string;
   isFeatured?: boolean;
 }
 
 export const FEATURED_DESIGN: ShowcaseItem = {
-  id: "featured-01",
-  title: "The Architectural Wool Wrap Coat",
-  category: "Bespoke Tailoring",
+  id: "featured-agbada-01",
+  title: "The Grand Imperial Aso-Oke Agbada Ensemble",
+  category: "Ceremonial Agbada",
   description:
-    "Sculpted with cascading lapels and asymmetric closures, tailored from double-faced virgin wool and unlined for pure drape. Developed through AI silhouette modeling and finished by Savile Row-trained master craftsmen.",
+    "A grand architectural 3-piece ceremonial statement crafted from hand-loomed Iseyin raw silk Aso-Oke with metallic gold weft. Features subtle tone-on-tone corded filigree embroidery, structured shoulders, and tailored slim-fit buba and sokoto.",
   imageUrl:
-    "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=1200",
-  fabric: "Double-Faced Loro Piana Virgin Wool (480gsm)",
-  silhouette: "Asymmetric Cocoon with Sculpted Belt",
-  craftingTime: "18 atelier hours",
-  atelierNote: "Hand-finished pick-stitched edges & horn buttons",
+    "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80&w=1200",
+  fabric: "Hand-Loomed Iseyin Raw Silk Aso-Oke & Pure Cotton Damask",
+  silhouette: "3-Piece Grand Imperial with Coordinated Fila",
+  craftingTime: "36 atelier hours",
+  priceEstimate: "From ₦280,000",
+  atelierNote: "Hand-stitched cordon embroidery with matching hand-embroidered fila",
   isFeatured: true,
 };
 
 export const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
-    id: "menswear-01",
-    title: "Structured Neapolitan Double-Breasted Suit",
-    category: "Contemporary Menswear",
+    id: "senator-01",
+    title: "The Minimalist Lekki Senator Suit",
+    category: "Contemporary Senator Suits",
     description:
-      "Lightweight canvas construction with soft shoulders, high armholes, and subtle roping for effortless elegance in modern metropolitan life.",
+      "Sharp, clean lines crafted from English tropical-weight wool with a concealed button fly, structured mandarin collar, and tapered ankle-grazing trousers.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=900",
+    fabric: "Super 140s English Tropical Wool in Charcoal Navy",
+    silhouette: "Structured Modern Senator Cut",
+    craftingTime: "18 atelier hours",
+    priceEstimate: "From ₦145,000",
+    atelierNote: "Concealed front placket with hand-sewn button loops",
+  },
+  {
+    id: "aso-ebi-01",
+    title: "Sculptural Corseted Aso-Ebi Evening Gown",
+    category: "Couture Aso-Ebi & Gowns",
+    description:
+      "Engineered for high-society weddings and galas. Features an internal French boned corset, hand-beaded lace appliques, illusion neckline, and dramatic pleated floor sweep.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=900",
+    fabric: "French Solstiss Lace & Heavy Silk Duchess Satin",
+    silhouette: "Cinched Internal Corset with Asymmetric Drape",
+    craftingTime: "40 atelier hours",
+    priceEstimate: "From ₦350,000",
+    atelierNote: "Spiral steel boning with micro-beaded crystal filigree",
+  },
+  {
+    id: "afro-01",
+    title: "The Modern Isi-Agu Double-Breasted Blazer",
+    category: "Modern Afro-Contemporary",
+    description:
+      "A contemporary reimagining of Igbo ceremonial velvet. Tailored as a modern double-breasted evening jacket with peak lapels and matte gold crest buttons.",
     imageUrl:
       "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=900",
-    fabric: "Super 150s Merino Wool in Charcoal Melange",
-    silhouette: "Neapolitan Tailored Fit",
+    fabric: "High-Density Velvet with Lion Crest Filigree",
+    silhouette: "Neapolitan Cut Double-Breasted Jacket",
     craftingTime: "24 atelier hours",
-    atelierNote: "Half-canvassed construction with horn closures",
+    priceEstimate: "From ₦195,000",
+    atelierNote: "Full floating horsehair canvas with silk lining",
   },
   {
-    id: "womenswear-01",
-    title: "High-Neck Fluid Draped Column Gown",
-    category: "Elegant Womenswear",
+    id: "kaftan-01",
+    title: "The Abuja Royal Draped Kaftan",
+    category: "Luxury Kaftans",
     description:
-      "A seamless study in fluid geometry. Bias-cut silk georgette with an open back and gentle sweep, engineered to individual posture and stride.",
+      "Crafted from authentic Austrian Getzner cotton brocade with a lustrous sheen, clean standing collar, and precision tonal embroidery along the neckline.",
     imageUrl:
-      "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=80&w=900",
-    fabric: "Mulberry Silk Crepe de Chine",
-    silhouette: "Bias-Cut Column",
+      "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=900",
+    fabric: "Authentic Austrian Cotton Brocade (Getzner Royal)",
+    silhouette: "Relaxed Sovereign Cut with Ankle Slits",
     craftingTime: "16 atelier hours",
-    atelierNote: "French seams and hand-rolled baby hems",
+    priceEstimate: "From ₦160,000",
+    atelierNote: "Laser-sharp tonal embroidery on collar and sleeve cuffs",
   },
   {
-    id: "cultural-01",
-    title: "Embroidered Heritage Agbada Ensemble",
-    category: "Traditional & Cultural Wear",
+    id: "bespoke-suit-01",
+    title: "Lagos Executive Peak-Lapel Suit",
+    category: "Bespoke Suiting",
     description:
-      "Contemporary reimagining of ceremonial West African royalty. Features hand-loomed Aso-Oke accents, intricate tonal cordon embroidery, and architectural drape.",
+      "Tailored for tropical climates with light half-canvas construction, soft unpadded shoulders, and breathable lightweight Italian wool.",
     imageUrl:
-      "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80&w=900",
-    fabric: "Hand-Woven Raw Silk & Organic Cotton Damask",
-    silhouette: "Grand Three-Piece Robe & Tapered Trouser",
-    craftingTime: "32 atelier hours",
-    atelierNote: "Custom geometric filigree embroidery pattern",
-  },
-  {
-    id: "streetwear-01",
-    title: "Minimalist Utility Trench & Cargo Trouser",
-    category: "Modern Streetwear",
-    description:
-      "Where high tailoring meets pragmatic urbanism. Water-repellent technical gabardine with hidden magnetic closures and ergonomic articulated knees.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&q=80&w=900",
-    fabric: "Ventile High-Density Cotton Gabardine",
-    silhouette: "Relaxed Boxy Silhouette",
-    craftingTime: "14 atelier hours",
-    atelierNote: "Bonded waterproof seams and matte gunmetal hardware",
-  },
-  {
-    id: "tailoring-01",
-    title: "Bespoke Peak-Lapel Dinner Jacket",
-    category: "Bespoke Tailoring",
-    description:
-      "Handcrafted evening masterpiece featuring grosgrain silk lapels, working surgeon cuffs, and bespoke horsehair chest canvas molded precisely to the torso.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&q=80&w=900",
-    fabric: "Midnight Blue Barathea Wool & Silk Faille",
-    silhouette: "Hourglass Bespoke Evening Cut",
-    craftingTime: "36 atelier hours",
-    atelierNote: "Fully hand-padded canvas and handmade buttonholes",
-  },
-  {
-    id: "occasion-01",
-    title: "Sculptural Corseted Satin Evening Gown",
-    category: "Evening & Occasion Wear",
-    description:
-      "Draped duchess satin over an internal boned micro-corset. Sculpted folds cascade from the waist into a structured dramatic silhouette.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&q=80&w=900",
-    fabric: "Heavy Italian Silk Duchess Satin",
-    silhouette: "Internal Corset with Asymmetric Peplum",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=900",
+    fabric: "Italian Vitale Barberis Canonico 240gsm Wool",
+    silhouette: "Tailored Slim Fit with Side Adjusters",
     craftingTime: "28 atelier hours",
-    atelierNote: "Steel spiral boning and invisible hand-sewn zipper",
+    priceEstimate: "From ₦260,000",
+    atelierNote: "Hand-stitched pick lapels and genuine horn buttons",
+  },
+  {
+    id: "contemporary-01",
+    title: "Fluid Silk Organza Kimono & Trouser Set",
+    category: "Modern Afro-Contemporary",
+    description:
+      "Elevated Lagos resortwear blending African botanical prints with fluid Japanese drape. Unlined raw silk with deep patch pockets and drawstring waist trousers.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&q=80&w=900",
+    fabric: "Mulberry Silk Twill with Bespoke Dye",
+    silhouette: "Fluid Relaxed Robe & Tapered Trouser",
+    craftingTime: "14 atelier hours",
+    priceEstimate: "From ₦120,000",
+    atelierNote: "French seams throughout with bound silk hems",
   },
 ];
 
 export const CUSTOMER_FEATURES = [
   {
-    title: "AI-Powered Fashion Concepts",
+    title: "AI Concept Generation for Nigerian Styles",
     description:
-      "Generate multiple visual interpretations of your style thoughts in seconds before committing to fabric.",
+      "Explore embroidery motifs, necklines, and silhouettes tailored to Agbadas, Senator suits, and Aso-Ebi.",
   },
   {
-    title: "Personalised Garment Specs",
+    title: "Authentic Nigerian Fabric Verification",
     description:
-      "Every detail from collar notch angle to lining pattern is tailored to your taste and comfort.",
+      "Guaranteed authentic textiles: verify Getzner brocades, hand-woven Aso-Oke, and Swiss laces with zero counterfeit risk.",
   },
   {
-    title: "Body Measurement Profiles",
+    title: "Precision Body Measurement Profiles",
     description:
-      "Store and refine your 3D biometric measurements securely for consistent fit across all creations.",
+      "Store and calibrate your 3D measurements for Agbada arm spans, buba sleeve lengths, and tailored trouser breaks.",
   },
   {
-    title: "Professional Tailor Quotations",
+    title: "Transparent Itemised Naira Quotations",
     description:
-      "Receive transparent, itemised cost estimates covering materials, hours, and finishing.",
+      "Receive detailed breakdowns covering fabric grade, embroidery complexity, tailoring labor, and delivery.",
   },
   {
-    title: "Production Milestone Tracking",
+    title: "Milestone Photo Updates",
     description:
-      "Follow every phase of your creation with real-time status updates from pattern cutting to final press.",
+      "Follow every phase of production: fabric cutting, basting fit check, embroidery progress, and final pressing.",
   },
   {
-    title: "Protected Payment Workflows",
+    title: "Protected Escrow Workflows",
     description:
-      "Platform safeguards ensure payments are held securely and released upon milestone completion.",
+      "Funds are held securely in protected milestone escrow and only disbursed when you approve key crafting stages.",
   },
 ];
 
 export const DESIGNER_FEATURES = [
   {
-    title: "Concept Development Engine",
+    title: "Afro-Centric Silhouette Studio",
     description:
-      "Translate raw client moodboards into cohesive design proposals with AI-assisted texture and silhouette rendering.",
+      "Develop Agbada cuts, corseted Aso-Ebi bodices, and modern Senator variations with AI-assisted drafting.",
   },
   {
-    title: "Garment Component Breakdown",
+    title: "Filigree & Embroidery Digitiser",
     description:
-      "Deconstruct garments automatically into collars, cuffs, yokes, and plackets for clear client consultation.",
+      "Design intricate neck and chest embroidery patterns and export stitch-count files directly for Nigerian embroidery artisans.",
   },
   {
-    title: "Pattern Drafting Assistance",
+    title: "Pattern Drafting & Grade Adjustments",
     description:
-      "Generate standard and custom slopers with automated grade adjustments to match exact customer profiles.",
+      "Generate standard and custom slopers calibrated for Nigerian body postures and proportions.",
   },
   {
-    title: "Technical Specification Exports",
+    title: "Production Tech Pack Exports",
     description:
-      "Export production-ready tech packs with stitch details, seams, seam allowances, and measurement tolerances.",
+      "Export comprehensive tech packs with stitch specifications, fabric tolerances, and yardage requirements for tailors.",
   },
   {
-    title: "Fabric & Yardage Estimation",
+    title: "Fabric Yardage Calculator",
     description:
-      "Calculate precise fabric yardage, interfacing, and lining requirements to minimise textile waste.",
+      "Calculate precise yardage for multi-piece Agbadas, buba & sokoto, and lining to minimise fabric waste.",
   },
   {
-    title: "Collaborative Atelier Bridge",
+    title: "Lagos & Abuja Atelier Collaboration",
     description:
-      "Seamlessly annotate technical specifications with tailor partners and clients in one shared interface.",
+      "Annotate technical specifications in real-time with master tailors and clients across Nigeria and the diaspora.",
   },
 ];
 
 export const TAILOR_FEATURES = [
   {
-    title: "Curated Design Requests",
+    title: "Verified Nigerian Design Requests",
     description:
-      "Access a steady stream of verified customer briefs with complete visual and technical briefs ready for execution.",
+      "Access a steady stream of verified customer briefs with complete visual tech packs ready for production.",
   },
   {
-    title: "Direct Measurement Review",
+    title: "Structured Naira Quotation Builder",
     description:
-      "Inspect detailed customer measurements, posture notes, and fit preferences before accepting an assignment.",
+      "Set your own labor fees, fabric costs, and rush rates with our automated itemised quotation generator.",
   },
   {
-    title: "Itemised Quotation Builder",
+    title: "Measurement & Fit Review",
     description:
-      "Define your own labor rates, material charges, and rush options with our structured quotation generator.",
+      "Inspect detailed client measurements, posture profiles, and fitting preferences before committing to a commission.",
   },
   {
-    title: "Order & Milestone Management",
+    title: "Milestone Order Management",
     description:
-      "Keep production organised with digital milestone stages: cutting, basting, first fitting, and finishing.",
+      "Keep production on track with structured stages: Fabric Intake, Precision Cutting, Basting Fitting, and Final Press.",
   },
   {
-    title: "Quality Assurance Coordination",
+    title: "Guaranteed Milestone Payouts",
     description:
-      "Upload progress photos and fitting confirmations to guarantee mutual satisfaction before delivery.",
+      "Direct bank deposits into any Nigerian commercial bank upon client sign-off at each production checkpoint.",
   },
   {
-    title: "Transparent Earnings Visibility",
+    title: "Nationwide & Diaspora Delivery Bridge",
     description:
-      "Clear accounting records and dependable automated payouts upon customer sign-off.",
+      "Integrated logistics for seamless delivery within Lagos, Abuja, Port Harcourt, and dispatch to UK, US, and Canada.",
   },
 ];
 
 export const TRUST_POINTS = [
   {
     number: "01",
-    title: "Verified Professionals",
+    title: "Vetted Nigerian Atelier Guild",
     description:
-      "Every designer and master tailor undergoes rigorous portfolio verification, craftsmanship vetting, and reference checks.",
+      "Every master tailor and designer across Lagos, Abuja, and nationwide undergoes strict craftsmanship checks and portfolio vetting.",
     badge: "100% Vetted Guild",
   },
   {
     number: "02",
-    title: "Transparent Quotations",
+    title: "Transparent Naira Pricing",
     description:
-      "Review comprehensive, itemised quotations detailing fabric grades, crafting hours, and trimming costs before approving an order.",
-    badge: "Zero Hidden Fees",
+      "Review itemised quotations detailing fabric grade, embroidery complexity, and tailoring hours in Naira. Zero hidden fees.",
+    badge: "Transparent Quotes",
   },
   {
     number: "03",
-    title: "Protected Payment Workflow",
+    title: "Protected Escrow Payments",
     description:
-      "Designed to support controlled fund releases linked to milestone approvals, keeping both clients and artisans secure.",
-    badge: "Milestone Security",
+      "Funds are held securely and released in milestones as the tailor completes fabric cutting, fitting, and delivery.",
+    badge: "Milestone Escrow",
   },
   {
     number: "04",
-    title: "Production Visibility",
+    title: "Authentic Fabric Provenance",
     description:
-      "Structured milestone checkpoints allow you to inspect cutting, fitting, and finishing stages with high-resolution imagery.",
-    badge: "Step-by-Step Proof",
+      "Guaranteed authentic textiles: certified Austrian Getzner brocade, genuine hand-loomed Aso-Oke, and European wools.",
+    badge: "Verified Textiles",
   },
 ];
 
 export const FOOTER_LINKS = {
   explore: [
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Fashion Showcase", href: "#showcase" },
-    { label: "Customer Experience", href: "#customer" },
-    { label: "Design Concept Gallery", href: "#showcase" },
+    { label: "AI Design Studio", href: "/studio" },
+    { label: "How It Works", href: "/#how-it-works" },
+    { label: "Nigerian Fashion Showcase", href: "/#showcase" },
+    { label: "Client Experience", href: "/#customer" },
   ],
   professionals: [
-    { label: "Designer Studio", href: "#designers" },
-    { label: "Tailor Marketplace", href: "#tailors" },
-    { label: "Join as a Designer", href: "/signup?role=designer" },
-    { label: "Join as a Tailor", href: "/signup?role=tailor" },
+    { label: "Designer CAD Studio", href: "/#designers" },
+    { label: "Tailor Marketplace", href: "/#tailors" },
+    { label: "Join as a Nigerian Designer", href: "/signup?role=designer" },
+    { label: "Join Master Tailors Guild", href: "/signup?role=tailor" },
   ],
   company: [
-    { label: "About FUETELLE", href: "#brand-statement" },
-    { label: "Atelier Standards", href: "#trust" },
-    { label: "Contact Concierge", href: "/contact" },
-    { label: "Frequently Asked Questions", href: "#faqs" },
+    { label: "About FUETELLE Nigeria", href: "/#brand-statement" },
+    { label: "Lagos & Abuja Ateliers", href: "/#trust" },
+    { label: "Concierge & Fittings", href: "/contact" },
+    { label: "Diaspora Shipping FAQs", href: "/#faqs" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
-    { label: "Payment & Milestone Policy", href: "/payment-policy" },
+    { label: "Escrow & Milestone Policy", href: "/payment-policy" },
     { label: "Craftsmanship Guarantee", href: "/guarantee" },
   ],
 };

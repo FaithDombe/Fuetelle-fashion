@@ -18,21 +18,22 @@ export default function FinalCTA() {
         <div className="inline-flex items-center justify-center space-x-2.5 mb-6">
           <Sparkles className="w-4 h-4 text-[#C5A880]" />
           <span className="text-[11px] font-sans uppercase tracking-[0.3em] text-[#C5A880] font-medium">
-            Begin Your Bespoke Journey
+            Begin Your Nigerian Bespoke Journey
           </span>
           <Sparkles className="w-4 h-4 text-[#C5A880]" />
         </div>
 
         {/* Serif Headline */}
         <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#F9F8F6] font-normal tracking-tight leading-[1.08] mb-8">
-          Your Next Outfit
+          Your Next Bespoke Outfit
           <br />
           <span className="italic font-light text-[#C5A880]">Starts Here.</span>
         </h2>
 
         {/* Supporting text */}
         <p className="font-sans text-base sm:text-lg md:text-xl text-[#F9F8F6]/75 max-w-xl mx-auto leading-relaxed mb-12 font-light">
-          Bring your imagination to life. Create something uniquely yours.
+          Bring your imagination to life. Commission authentic Nigerian bespoke
+          luxury created around your measurements and cultural heritage.
         </p>
 
         {/* Two prominent CTAs */}
@@ -60,9 +61,9 @@ export default function FinalCTA() {
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-[11px] tracking-widest uppercase text-[#F9F8F6]/50 font-sans">
           <span>AI Concept Studio</span>
           <span>&bull;</span>
-          <span>Vetted Master Tailors</span>
+          <span>Vetted Master Tailors &bull; Lagos &bull; Abuja</span>
           <span>&bull;</span>
-          <span>Made-To-Measure Guarantee</span>
+          <span>Guaranteed Authentic Textiles</span>
         </div>
       </div>
     </section>

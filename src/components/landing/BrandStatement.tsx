@@ -14,23 +14,27 @@ export default function BrandStatement() {
 
         {/* Headline */}
         <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#0B0B0C] tracking-tight font-normal leading-tight mb-8">
-          Fashion Should Be Personal.
+          Nigerian Sartorial Mastery.
+          <br />
+          <span className="italic font-light text-[#66645F]">
+            Made Truly Personal.
+          </span>
         </h2>
 
         {/* Supporting Text */}
         <p className="font-sans text-base sm:text-lg md:text-xl text-[#66645F] leading-relaxed max-w-3xl mx-auto font-light">
-          Every garment begins with an idea. We bring customers, creative
-          designers, and skilled tailors together to turn inspiration into
-          clothing made around individual style, measurements, and preferences.
+          From the vibrant fashion capitals of Lagos and Abuja to clients across
+          the global diaspora, we connect discerning individuals with Nigeria’s
+          foremost fashion designers, authentic textile mills, and master
+          craftsmen to create garments made to your exact measurements and
+          cultural heritage.
         </p>
 
         {/* Subtle atelier tagline */}
         <div className="mt-10 inline-flex items-center space-x-4 text-xs uppercase tracking-[0.25em] text-[#C5A880] font-sans">
-          <span>Vision</span>
+          <span>Aso-Oke &bull; Getzner &bull; Solstiss Lace</span>
           <span>&bull;</span>
-          <span>Precision</span>
-          <span>&bull;</span>
-          <span>Craftsmanship</span>
+          <span>Lagos &bull; Abuja &bull; Diaspora</span>
         </div>
       </div>
     </section>

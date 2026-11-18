@@ -20,14 +20,14 @@ export default function Footer() {
                 FUETELLE
               </span>
               <span className="block text-[9px] tracking-[0.35em] uppercase text-[#C5A880] mt-0.5">
-                Atelier &bull; Couture
+                Nigeria &bull; Lagos &bull; Abuja
               </span>
             </Link>
 
             <p className="text-xs text-[#F9F8F6]/60 leading-relaxed max-w-sm mb-6">
-              The luxury platform connecting visionaries with world-class fashion
-              designers and master tailors. Bringing custom garments from
-              inspiration to precision reality.
+              The premier Nigerian bespoke couture platform connecting clients with
+              Nigeria’s foremost fashion designers and master tailors across Lagos,
+              Abuja, Port Harcourt, and the global diaspora.
             </p>
 
             {/* Social Icons (Accessible SVGs) */}
@@ -155,13 +155,13 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#F9F8F6]/50 gap-4">
           <p>
-            &copy; {new Date().getFullYear()} FUETELLE Atelier. All rights
+            &copy; {new Date().getFullYear()} FUETELLE Atelier Nigeria. All rights
             reserved.
           </p>
 
           <div className="flex items-center space-x-6">
             <span className="text-[11px] text-[#C5A880]">
-              Handcrafted bespoke luxury
+              Handcrafted Nigerian Haute Couture
             </span>
 
             {/* Back to top button */}

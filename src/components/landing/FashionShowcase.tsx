@@ -34,7 +34,7 @@ export default function FashionShowcase() {
             <div className="inline-flex items-center space-x-2.5 mb-4">
               <span className="w-5 h-[1px] bg-[#C5A880]" aria-hidden="true" />
               <span className="text-[11px] font-sans uppercase tracking-[0.25em] text-[#C5A880] font-semibold">
-                Curated Creations
+                Curated Nigerian Bespoke Creations
               </span>
             </div>
 
@@ -43,16 +43,17 @@ export default function FashionShowcase() {
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-[#66645F] leading-relaxed">
-              From timeless tailoring to contemporary silhouettes, explore the
-              possibilities of personalised fashion.
+              From grand architectural Agbadas and tailored Senator suits to
+              corseted Aso-Ebi couture, explore the possibilities of personalized
+              Nigerian fashion.
             </p>
           </div>
 
           <Link
-            href="/signup"
+            href="/studio"
             className="self-start md:self-end inline-flex items-center text-xs tracking-[0.16em] uppercase text-[#0B0B0C] hover:text-[#C5A880] font-sans font-medium transition-colors border-b border-[#0B0B0C] hover:border-[#C5A880] pb-1"
           >
-            <span>Commission a Custom Piece</span>
+            <span>Commission a Custom Piece in Studio</span>
             <ArrowRight className="ml-2 w-3.5 h-3.5" />
           </Link>
         </div>
@@ -93,14 +94,19 @@ export default function FashionShowcase() {
                 />
                 <div className="absolute top-4 left-4 bg-[#0B0B0C] text-[#C5A880] text-[10px] tracking-[0.2em] uppercase font-sans px-3 py-1.5 flex items-center space-x-1.5">
                   <Sparkles className="w-3 h-3" />
-                  <span>Featured Atelier Spotlight</span>
+                  <span>Featured Atelier Spotlight &bull; Lagos</span>
                 </div>
               </div>
 
               <div className="lg:col-span-5 p-8 lg:p-12 flex flex-col justify-between">
                 <div>
-                  <div className="text-[11px] tracking-[0.2em] uppercase text-[#C5A880] font-sans font-semibold mb-2">
-                    {FEATURED_DESIGN.category} &bull; Editorial No. 01
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[11px] tracking-[0.2em] uppercase text-[#C5A880] font-sans font-semibold">
+                      {FEATURED_DESIGN.category}
+                    </span>
+                    <span className="text-xs font-mono font-semibold text-[#236B4A] bg-[#236B4A]/10 px-2.5 py-0.5">
+                      {FEATURED_DESIGN.priceEstimate}
+                    </span>
                   </div>
                   <h3 className="font-serif text-3xl sm:text-4xl text-[#0B0B0C] font-normal mb-4">
                     {FEATURED_DESIGN.title}
@@ -111,15 +117,15 @@ export default function FashionShowcase() {
 
                   <div className="space-y-3 pt-6 border-t border-[#E5E2DC] text-xs font-sans text-[#66645F]">
                     <div className="flex items-center justify-between">
-                      <span className="text-[#0B0B0C] font-medium">Fabric:</span>
-                      <span>{FEATURED_DESIGN.fabric}</span>
+                      <span className="text-[#0B0B0C] font-medium">Authentic Textile:</span>
+                      <span className="text-right truncate max-w-[200px]">{FEATURED_DESIGN.fabric}</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-[#0B0B0C] font-medium">Silhouette:</span>
+                      <span className="text-[#0B0B0C] font-medium">Silhouette Cut:</span>
                       <span>{FEATURED_DESIGN.silhouette}</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-[#0B0B0C] font-medium">Crafting:</span>
+                      <span className="text-[#0B0B0C] font-medium">Atelier Time:</span>
                       <span>{FEATURED_DESIGN.craftingTime}</span>
                     </div>
                   </div>
@@ -140,7 +146,7 @@ export default function FashionShowcase() {
           </div>
         )}
 
-        {/* Gallery Grid: Asymmetrical Luxury Editorial Look */}
+        {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredItems.map((item, idx) => (
             <article
@@ -160,6 +166,10 @@ export default function FashionShowcase() {
 
                 <div className="absolute top-3 left-3 bg-[#F9F8F6]/90 backdrop-blur-sm px-2.5 py-1 text-[10px] tracking-widest uppercase font-sans text-[#0B0B0C]">
                   {item.category}
+                </div>
+
+                <div className="absolute top-3 right-3 bg-[#0B0B0C]/85 backdrop-blur-sm px-2.5 py-1 text-[10px] font-mono text-[#C5A880]">
+                  {item.priceEstimate}
                 </div>
 
                 <div className="absolute inset-0 bg-[#0B0B0C]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
@@ -230,6 +240,9 @@ export default function FashionShowcase() {
               <div className="absolute bottom-4 left-4 bg-[#0B0B0C] text-[#C5A880] text-[10px] tracking-widest uppercase font-sans px-3 py-1">
                 {activeItem.category}
               </div>
+              <div className="absolute bottom-4 right-4 bg-[#236B4A] text-white text-xs font-mono px-3 py-1">
+                {activeItem.priceEstimate}
+              </div>
             </div>
 
             <div className="p-8">
@@ -245,10 +258,10 @@ export default function FashionShowcase() {
                   <div className="flex items-center space-x-1.5 text-[#C5A880]">
                     <Layers className="w-3.5 h-3.5" />
                     <span className="font-medium uppercase tracking-wider text-[10px]">
-                      Fabric
+                      Authentic Textile
                     </span>
                   </div>
-                  <p className="text-[#0B0B0C]">{activeItem.fabric}</p>
+                  <p className="text-[#0B0B0C] line-clamp-2">{activeItem.fabric}</p>
                 </div>
 
                 <div className="space-y-1">
@@ -265,7 +278,7 @@ export default function FashionShowcase() {
                   <div className="flex items-center space-x-1.5 text-[#C5A880]">
                     <Clock className="w-3.5 h-3.5" />
                     <span className="font-medium uppercase tracking-wider text-[10px]">
-                      Crafting
+                      Atelier Time
                     </span>
                   </div>
                   <p className="text-[#0B0B0C]">{activeItem.craftingTime}</p>
@@ -279,10 +292,10 @@ export default function FashionShowcase() {
 
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <Link
-                  href="/signup"
+                  href="/studio"
                   className="w-full sm:w-auto flex-1 text-center py-3.5 px-6 bg-[#0B0B0C] text-[#F9F8F6] text-xs uppercase tracking-[0.16em] font-sans font-medium hover:bg-[#66645F] transition-colors"
                 >
-                  Commission Similar Outfit &rarr;
+                  Customize in AI Studio &rarr;
                 </Link>
                 <button
                   type="button"

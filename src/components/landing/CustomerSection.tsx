@@ -16,7 +16,7 @@ export default function CustomerSection() {
             <div className="inline-flex items-center space-x-2.5 mb-4">
               <span className="w-5 h-[1px] bg-[#C5A880]" aria-hidden="true" />
               <span className="text-[11px] font-sans uppercase tracking-[0.25em] text-[#C5A880] font-semibold">
-                Client Atelier Experience
+                Client Bespoke Atelier Experience
               </span>
             </div>
 
@@ -31,9 +31,10 @@ export default function CustomerSection() {
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-[#66645F] leading-relaxed mb-10">
-              Create garments that reflect your personality, preferences, and
-              proportions. Explore designs, work with professionals, and
-              commission clothing made specifically for you.
+              Create garments that celebrate your heritage, proportions, and personal
+              aesthetic. Whether preparing for a Lagos high-society wedding, an Abuja
+              gala, or elevated executive dressing, commission clothing made
+              specifically for you by Nigeria’s finest craftsmen.
             </p>
 
             {/* Feature Highlights Grid */}
@@ -61,7 +62,7 @@ export default function CustomerSection() {
                 href="/studio"
                 className="group inline-flex items-center justify-center px-8 py-4 bg-[#0B0B0C] text-[#F9F8F6] text-xs uppercase tracking-[0.18em] font-sans font-medium transition-all duration-300 hover:bg-[#66645F] border border-[#0B0B0C] shadow-sm"
               >
-                <span>Start Designing</span>
+                <span>Start Designing in Studio</span>
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 text-[#C5A880]" />
               </Link>
             </div>
@@ -71,8 +72,8 @@ export default function CustomerSection() {
           <div className="lg:col-span-6 order-1 lg:order-2">
             <div className="relative aspect-[4/5] w-full max-w-md mx-auto lg:max-w-none overflow-hidden bg-[#F0EDE7] border border-[#E5E2DC]">
               <Image
-                src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&q=80&w=1200"
-                alt="Client admiring an exquisitely tailored bespoke luxury garment"
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1200"
+                alt="Client admiring an exquisitely tailored bespoke luxury Nigerian gown"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center transition-transform duration-700 ease-out hover:scale-105"
@@ -82,14 +83,13 @@ export default function CustomerSection() {
               <div className="absolute bottom-6 left-6 right-6 bg-[#F9F8F6]/95 backdrop-blur-md p-5 border border-[#E5E2DC] shadow-lg">
                 <div className="flex items-center justify-between text-[10px] uppercase tracking-widest text-[#C5A880] mb-1 font-sans">
                   <span>Custom Fit Guarantee</span>
-                  <span>Bespoke Measurement</span>
+                  <span>Nigeria & Diaspora</span>
                 </div>
                 <div className="font-serif text-lg text-[#0B0B0C]">
-                  Designed for your silhouette
+                  Calibrated to your exact posture
                 </div>
                 <p className="text-xs text-[#66645F] font-sans mt-1">
-                  Precision digital drafting ensures garments fit every contour
-                  seamlessly.
+                  Accurate 3D arm-span and shoulder profiling for perfect Agbada drape and corsetry.
                 </p>
               </div>
             </div>

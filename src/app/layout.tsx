@@ -16,24 +16,26 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "FUETELLE | Your Vision. Your Style. Made to Measure.",
+  title: "FUETELLE | Nigerian Bespoke Haute Couture & Tailoring Atelier",
   description:
-    "Transform your fashion ideas into custom-made garments with AI-powered design, professional fashion designers, and skilled tailors. Luxury bespoke fashion atelier marketplace.",
+    "Transform your fashion ideas into bespoke Nigerian garments with AI-powered design, top Nigerian fashion designers, and master tailors across Lagos, Abuja, and nationwide. Ceremonial Agbadas, Senator suits, and couture Aso-Ebi.",
   keywords: [
-    "bespoke fashion",
-    "custom tailoring",
-    "AI fashion design",
-    "haute couture marketplace",
-    "made to measure",
-    "tailor studio",
+    "Nigerian bespoke fashion",
+    "Agbada tailor Lagos",
+    "Senator suit tailor Abuja",
+    "Aso-Ebi couture Nigeria",
+    "custom tailoring Nigeria",
+    "AI fashion design Lagos",
+    "Getzner brocade bespoke",
+    "Aso-Oke luxury attire",
   ],
   openGraph: {
-    title: "FUETELLE — Luxury Made to Measure & Fashion Atelier",
+    title: "FUETELLE — Nigerian Bespoke Haute Couture & Atelier Guild",
     description:
-      "Transform your fashion ideas into custom-made garments with AI-powered design, professional fashion designers, and skilled tailors.",
+      "Transform your fashion ideas into bespoke Nigerian garments with AI-powered design, top Nigerian fashion designers, and master tailors across Lagos, Abuja, and nationwide.",
     type: "website",
-    locale: "en_US",
-    siteName: "FUETELLE",
+    locale: "en_NG",
+    siteName: "FUETELLE Nigeria",
   },
 };
 

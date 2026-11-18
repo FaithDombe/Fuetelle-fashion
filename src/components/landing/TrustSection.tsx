@@ -15,7 +15,7 @@ export default function TrustSection() {
           <div className="inline-flex items-center justify-center space-x-2.5 mb-4">
             <span className="w-5 h-[1px] bg-[#C5A880]" aria-hidden="true" />
             <span className="text-[11px] font-sans uppercase tracking-[0.25em] text-[#C5A880] font-semibold">
-              Integrity & Craft Standards
+              Integrity & Nigerian Atelier Standards
             </span>
             <span className="w-5 h-[1px] bg-[#C5A880]" aria-hidden="true" />
           </div>
@@ -25,9 +25,9 @@ export default function TrustSection() {
           </h2>
 
           <p className="font-sans text-base sm:text-lg text-[#66645F] leading-relaxed">
-            Custom fashion should be personal, transparent, and dependable. Our
-            platform is designed to support accountability throughout the
-            production journey.
+            Custom Nigerian fashion should be dependable, authentic, and transparent.
+            Our platform safeguards your investment from genuine fabric verification
+            to protected milestone delivery.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export default function TrustSection() {
                 </div>
 
                 <div className="pt-6 mt-8 border-t border-[#E5E2DC]/60 flex items-center justify-between text-[11px] text-[#66645F] font-sans">
-                  <span>Atelier Guarantee</span>
+                  <span>Guild Guarantee</span>
                   <Sparkles className="w-3.5 h-3.5 text-[#C5A880]" />
                 </div>
               </div>
@@ -77,10 +77,9 @@ export default function TrustSection() {
         <div className="mt-16 p-6 bg-[#F0EDE7]/60 border border-[#E5E2DC] text-center max-w-2xl mx-auto">
           <p className="text-xs text-[#66645F] font-sans leading-relaxed">
             <strong className="text-[#0B0B0C] font-medium">
-              Protected Production Policy:{" "}
+              Protected Milestone Policy:{" "}
             </strong>
-            Designed to support safeguarded payment releases and transparent
-            technical sign-offs at each production milestone.
+            Designed to support safeguarded Naira payment releases, genuine textile authentication, and verified nationwide dispatch across Lagos, Abuja, Port Harcourt, and diaspora hubs.
           </p>
         </div>
       </div>

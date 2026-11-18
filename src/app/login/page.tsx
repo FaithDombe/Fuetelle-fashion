@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, Sparkles } from "lucide-react";
+import { ArrowLeft, Sparkles, MapPin } from "lucide-react";
 
 export default function LoginPage() {
   return (
@@ -8,18 +8,23 @@ export default function LoginPage() {
         <div className="inline-flex items-center space-x-2 text-[#C5A880] mb-6">
           <Sparkles className="w-4 h-4" />
           <span className="text-[11px] uppercase tracking-[0.25em] font-medium">
-            FUETELLE ATELIER
+            FUETELLE NIGERIA ATELIER
           </span>
         </div>
 
         <h1 className="font-serif text-3xl sm:text-4xl text-[#0B0B0C] font-normal mb-4">
-          Atelier Member Sign In
+          Member Sign In
         </h1>
 
-        <p className="text-xs sm:text-sm text-[#66645F] leading-relaxed mb-8">
-          Member portal authentication will be accessible upon public launch.
-          Please check back soon or request invitation access.
+        <p className="text-xs sm:text-sm text-[#66645F] leading-relaxed mb-6">
+          Client, designer, and master tailor authentication for our Lagos, Abuja,
+          and global diaspora portals will be open upon public launch.
         </p>
+
+        <div className="inline-flex items-center space-x-1.5 text-xs text-[#236B4A] mb-8 bg-[#236B4A]/10 px-3 py-1 font-medium">
+          <MapPin className="w-3.5 h-3.5" />
+          <span>Lagos &bull; Abuja &bull; Diaspora Guild</span>
+        </div>
 
         <Link
           href="/"

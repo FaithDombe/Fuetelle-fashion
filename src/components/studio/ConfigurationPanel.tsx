@@ -97,7 +97,7 @@ export default function ConfigurationPanel({
           }`}
         >
           <Layers className="w-3 h-3 text-[#C5A880]" />
-          <span>Fabric</span>
+          <span>Textile</span>
         </button>
 
         <button
@@ -110,7 +110,7 @@ export default function ConfigurationPanel({
           }`}
         >
           <Sliders className="w-3 h-3 text-[#C5A880]" />
-          <span>Details</span>
+          <span>Hardware</span>
         </button>
 
         <button
@@ -134,10 +134,10 @@ export default function ConfigurationPanel({
           <div className="space-y-4">
             <div>
               <h4 className="font-serif text-xl text-[#0B0B0C] font-normal mb-1">
-                Select Base Archetype
+                Select Nigerian Garment Base
               </h4>
               <p className="text-xs text-[#66645F] font-sans">
-                Choose the structural foundation for your bespoke commission.
+                Select your structural silhouette foundation.
               </p>
             </div>
 
@@ -170,9 +170,14 @@ export default function ConfigurationPanel({
                       )}
                     </div>
                     <div className="p-3">
-                      <span className="text-[10px] tracking-wider uppercase text-[#C5A880] font-sans block mb-0.5">
-                        {item.category}
-                      </span>
+                      <div className="flex items-center justify-between mb-0.5">
+                        <span className="text-[10px] tracking-wider uppercase text-[#C5A880] font-sans block">
+                          {item.category}
+                        </span>
+                        <span className="text-[10px] font-mono text-[#236B4A]">
+                          ₦{(item.basePriceNaira / 1000).toFixed(0)}k
+                        </span>
+                      </div>
                       <h5 className="font-serif text-sm text-[#0B0B0C] font-medium leading-tight line-clamp-1">
                         {item.name}
                       </h5>
@@ -189,10 +194,10 @@ export default function ConfigurationPanel({
           <div className="space-y-4">
             <div>
               <h4 className="font-serif text-xl text-[#0B0B0C] font-normal mb-1">
-                Silhouette & Proportions
+                Silhouette & Drape Cut
               </h4>
               <p className="text-xs text-[#66645F] font-sans">
-                Tailor the architectural line and posture for {archetype.name}.
+                Calibrate the arm span, neckline, and body cut for {archetype.name}.
               </p>
             </div>
 
@@ -228,15 +233,15 @@ export default function ConfigurationPanel({
           </div>
         )}
 
-        {/* TAB 3: FABRICS */}
+        {/* TAB 3: TEXTILE */}
         {activeTab === "fabric" && (
           <div className="space-y-4">
             <div>
               <h4 className="font-serif text-xl text-[#0B0B0C] font-normal mb-1">
-                Luxury Mill & Textile Selection
+                Authentic Nigerian & European Textiles
               </h4>
               <p className="text-xs text-[#66645F] font-sans">
-                Select from verified European and heritage artisan mills.
+                Every fabric is certified genuine: Iseyin Aso-Oke, Austrian Getzner, or fine wool.
               </p>
             </div>
 
@@ -268,7 +273,7 @@ export default function ConfigurationPanel({
                         )}
                       </div>
                       <div className="text-[10px] text-[#C5A880] tracking-wider uppercase font-sans mb-1">
-                        {swatch.origin} &bull; {swatch.weightGsm} GSM &bull; {swatch.drapeFactor}
+                        {swatch.origin} &bull; {swatch.weightGsm} GSM
                       </div>
                       <p className="text-xs text-[#66645F] font-sans line-clamp-1">
                         {swatch.textureDescription}
@@ -281,15 +286,15 @@ export default function ConfigurationPanel({
           </div>
         )}
 
-        {/* TAB 4: HARDWARE & DETAILS */}
+        {/* TAB 4: HARDWARE */}
         {activeTab === "hardware" && (
           <div className="space-y-4">
             <div>
               <h4 className="font-serif text-xl text-[#0B0B0C] font-normal mb-1">
-                Atelier Hardware & Closures
+                Atelier Hardware & Finishes
               </h4>
               <p className="text-xs text-[#66645F] font-sans">
-                Fine details tailored to elevate the finished garment.
+                Fine details, crest buttons, and artisanal accents.
               </p>
             </div>
 
@@ -332,13 +337,13 @@ export default function ConfigurationPanel({
             <div>
               <div className="inline-flex items-center space-x-1.5 text-[#C5A880] text-xs font-sans uppercase tracking-wider font-medium mb-1">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>AI Silhouette Synthesizer</span>
+                <span>Nigerian AI Concept Studio</span>
               </div>
               <h4 className="font-serif text-xl text-[#0B0B0C] font-normal">
-                Refine with Creative Vision
+                Refine Your Creative Vision
               </h4>
               <p className="text-xs text-[#66645F] font-sans mt-1">
-                Describe stylistic nuances, inspirations, or occasion requirements.
+                Describe your occasion, filigree embroidery details, or styling preferences.
               </p>
             </div>
 
@@ -352,7 +357,7 @@ export default function ConfigurationPanel({
                 rows={4}
                 value={customPrompt}
                 onChange={(e) => setCustomPrompt(e.target.value)}
-                placeholder="e.g. Asymmetric wrap silhouette with architectural cascading lapels inspired by Japanese brutalism in charcoal slate..."
+                placeholder="e.g. Grand architectural Agbada in midnight navy Aso-Oke with tonal bronze cordon filigree for an Ikoyi wedding reception..."
                 className="w-full p-3.5 text-xs font-sans bg-[#F9F8F6] border border-[#E5E2DC] focus:border-[#C5A880] focus:outline-none transition-colors leading-relaxed placeholder:text-[#66645F]/50 resize-none"
               />
             </div>
@@ -360,7 +365,7 @@ export default function ConfigurationPanel({
             {/* Style Presets */}
             <div>
               <span className="block text-[11px] uppercase tracking-wider text-[#66645F] font-sans mb-2 font-medium">
-                Atelier Aesthetic Presets
+                Nigerian Aesthetic Presets
               </span>
               <div className="flex flex-wrap gap-2">
                 {STYLE_PRESETS.map((preset) => (
@@ -387,7 +392,7 @@ export default function ConfigurationPanel({
               className="w-full py-3.5 px-4 bg-[#0B0B0C] text-[#F9F8F6] text-xs uppercase tracking-[0.18em] font-sans font-medium hover:bg-[#66645F] transition-all duration-300 border border-[#0B0B0C] flex items-center justify-center space-x-2 disabled:opacity-60"
             >
               <RefreshCw className={`w-3.5 h-3.5 text-[#C5A880] ${isAiGenerating ? "animate-spin" : ""}`} />
-              <span>{isAiGenerating ? "Synthesizing Silhouettes..." : "Synthesize AI Variation"}</span>
+              <span>{isAiGenerating ? "Synthesizing Nigerian Silhouettes..." : "Synthesize AI Variation"}</span>
             </button>
           </div>
         )}
@@ -406,7 +411,7 @@ export default function ConfigurationPanel({
         <div className="h-6 w-[1px] bg-[#E5E2DC]" />
         <div>
           <span className="text-[10px] uppercase tracking-wider text-[#66645F] block">
-            Yardage
+            Authentic Yardage
           </span>
           <span className="font-serif text-sm text-[#0B0B0C]">
             {archetype.baseYardage} meters
@@ -415,10 +420,10 @@ export default function ConfigurationPanel({
         <div className="h-6 w-[1px] bg-[#E5E2DC]" />
         <div>
           <span className="text-[10px] uppercase tracking-wider text-[#66645F] block">
-            Milestone Tier
+            Estimate
           </span>
           <span className="font-serif text-sm text-[#236B4A]">
-            Bespoke Atelier
+            ₦{archetype.basePriceNaira.toLocaleString()}
           </span>
         </div>
       </div>

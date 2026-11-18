@@ -17,7 +17,7 @@ import {
 } from "@/lib/studio-data";
 
 export default function StudioPage() {
-  const [designName, setDesignName] = useState("Bespoke Silhouette No. 01");
+  const [designName, setDesignName] = useState("Grand Imperial Agbada No. 01");
   const [archetype, setArchetype] = useState<GarmentArchetype>(GARMENT_ARCHETYPES[0]);
   const [silhouette, setSilhouette] = useState<SilhouetteOption>(
     SILHOUETTE_OPTIONS[GARMENT_ARCHETYPES[0].id][0]
@@ -25,7 +25,7 @@ export default function StudioPage() {
   const [fabric, setFabric] = useState<FabricSwatch>(FABRIC_SWATCHES[0]);
   const [hardware, setHardware] = useState<HardwareOption>(HARDWARE_OPTIONS[0]);
   const [customPrompt, setCustomPrompt] = useState(
-    "Asymmetric wrap silhouette with architectural cascading lapels"
+    "Grand architectural Agbada in midnight navy Aso-Oke with tonal bronze cordon filigree"
   );
   const [isAiGenerating, setIsAiGenerating] = useState(false);
   const [commissionModalOpen, setCommissionModalOpen] = useState(false);
@@ -35,7 +35,7 @@ export default function StudioPage() {
     setIsAiGenerating(true);
     setTimeout(() => {
       setIsAiGenerating(false);
-      showToast("AI synthesized design variation and adjusted tech specifications.");
+      showToast("Nigerian AI engine calibrated embroidery filigree and silhouette drape.");
     }, 1200);
   };
 
@@ -48,10 +48,12 @@ export default function StudioPage() {
 
   const handleExportSpec = () => {
     const specData = {
-      platform: "FUETELLE ATELIER",
+      platform: "FUETELLE ATELIER NIGERIA",
       designName,
       archetype: archetype.name,
       category: archetype.category,
+      basePriceNaira: archetype.basePriceNaira,
+      currency: "NGN (₦)",
       silhouette: silhouette.name,
       silhouetteDescription: silhouette.description,
       fabric: {
@@ -65,6 +67,7 @@ export default function StudioPage() {
       estimatedAtelierHours: archetype.baseCraftingHours,
       recommendedYardageMeters: archetype.baseYardage,
       clientPrompt: customPrompt,
+      guildLocations: ["Lagos (Island/Mainland)", "Abuja", "Port Harcourt", "Ibadan"],
       generatedTimestamp: new Date().toISOString(),
     };
 
@@ -77,7 +80,7 @@ export default function StudioPage() {
     a.download = `${designName.toLowerCase().replace(/\s+/g, "-")}-spec.json`;
     a.click();
     URL.revokeObjectURL(url);
-    showToast("Technical Specification tech-pack exported successfully.");
+    showToast("Nigerian Atelier Tech-Pack specification exported successfully.");
   };
 
   return (

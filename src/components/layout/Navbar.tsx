@@ -38,7 +38,7 @@ export default function Navbar() {
             FUETELLE
           </span>
           <span className="text-[9px] tracking-[0.35em] uppercase text-[#66645F] -mt-1 font-sans">
-            Atelier &bull; Couture
+            Nigeria &bull; Atelier
           </span>
         </Link>
 
@@ -64,10 +64,10 @@ export default function Navbar() {
             Sign In
           </Link>
           <Link
-            href="/signup"
+            href="/studio"
             className="group inline-flex items-center justify-center px-5 py-2.5 bg-[#0B0B0C] text-[#F9F8F6] text-xs tracking-[0.14em] uppercase font-sans font-medium rounded-none hover:bg-[#66645F] transition-all duration-300 border border-[#0B0B0C] hover:border-[#66645F]"
           >
-            <span>Get Started</span>
+            <span>Design Studio</span>
             <ArrowUpRight className="ml-1.5 w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-[#C5A880]" />
           </Link>
         </div>
@@ -75,10 +75,10 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <div className="flex md:hidden items-center space-x-3">
           <Link
-            href="/signup"
+            href="/studio"
             className="text-[11px] tracking-wider uppercase px-3.5 py-1.5 bg-[#0B0B0C] text-[#F9F8F6] font-medium"
           >
-            Get Started
+            Studio
           </Link>
           <button
             type="button"
@@ -121,11 +121,11 @@ export default function Navbar() {
               Sign In
             </Link>
             <Link
-              href="/signup"
+              href="/studio"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center py-3 text-xs tracking-[0.14em] uppercase bg-[#0B0B0C] text-[#F9F8F6] font-medium flex items-center justify-center space-x-2"
             >
-              <span>Get Started</span>
+              <span>Launch AI Studio</span>
               <Sparkles className="w-3.5 h-3.5 text-[#C5A880]" />
             </Link>
           </div>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Sparkles, ShieldCheck } from "lucide-react";
+import { ArrowRight, Sparkles, ShieldCheck, MapPin } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -19,7 +19,7 @@ export default function HeroSection() {
             <div className="inline-flex items-center space-x-2.5 mb-6">
               <span className="w-6 h-[1px] bg-[#C5A880]" aria-hidden="true" />
               <span className="text-[11px] font-sans uppercase tracking-[0.25em] text-[#C5A880] font-semibold">
-                THE FUTURE OF PERSONAL STYLE
+                THE FUTURE OF NIGERIAN BESPOKE STYLE
               </span>
             </div>
 
@@ -36,9 +36,11 @@ export default function HeroSection() {
 
             {/* Supporting paragraph */}
             <p className="font-sans text-base sm:text-lg text-[#66645F] max-w-xl leading-relaxed mb-10 font-normal">
-              Transform your fashion ideas into beautifully designed, custom-made
-              garments. From your first inspiration to the final stitch, bring your
-              vision to life with AI, professional designers, and skilled tailors.
+              Transform your fashion ideas into bespoke Nigerian garments. From
+              grand ceremonial Agbadas and contemporary Senator suits to couture
+              Aso-Ebi gowns, bring your vision to life with AI concept design, top
+              Nigerian fashion houses, and master tailors across Lagos, Abuja,
+              and nationwide.
             </p>
 
             {/* CTA Buttons */}
@@ -52,7 +54,7 @@ export default function HeroSection() {
               </Link>
 
               <Link
-                href="#designers"
+                href="/#designers"
                 className="group inline-flex items-center justify-center px-8 py-4 bg-transparent text-[#0B0B0C] text-xs uppercase tracking-[0.18em] font-sans font-medium transition-all duration-300 hover:bg-[#F0EDE7] border border-[#E5E2DC] hover:border-[#C5A880]"
               >
                 <span>Enter Designer Studio</span>
@@ -64,17 +66,14 @@ export default function HeroSection() {
 
             {/* Supporting trust statement */}
             <div className="pt-6 border-t border-[#E5E2DC]/80 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-[#66645F] font-sans">
-              <div className="flex items-center space-x-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#236B4A]" />
-                <span className="font-medium text-[#0B0B0C]">
-                  Designed around you.
-                </span>
-                <span>Crafted by professionals.</span>
+              <div className="flex items-center space-x-1.5 text-[#0B0B0C]">
+                <MapPin className="w-3.5 h-3.5 text-[#236B4A]" />
+                <span className="font-medium">Lagos &bull; Abuja &bull; Diaspora Dispatch</span>
               </div>
               <div className="hidden sm:inline-block text-[#E5E2DC]">&bull;</div>
               <div className="flex items-center space-x-1 text-[#66645F]">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#236B4A]" />
-                <span>Protected milestone delivery</span>
+                <span>Protected milestone payments in Naira (₦)</span>
               </div>
             </div>
           </div>
@@ -87,8 +86,8 @@ export default function HeroSection() {
             {/* Main Editorial Image Card */}
             <div className="relative aspect-[3/4] w-full max-w-lg mx-auto overflow-hidden bg-[#F0EDE7] shadow-[0_20px_50px_rgba(11,11,12,0.08)]">
               <Image
-                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=1200"
-                alt="High-fashion editorial model wearing a bespoke tailored architectural coat"
+                src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80&w=1200"
+                alt="High-fashion model wearing bespoke tailored ceremonial Nigerian attire with intricate corded embroidery"
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 42vw"
@@ -96,25 +95,25 @@ export default function HeroSection() {
               />
 
               {/* Dark subtle gradient at bottom for legibility */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0C]/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0C]/70 via-transparent to-transparent pointer-events-none" />
 
               {/* Editorial Fashion Tag Annotation */}
               <div className="absolute top-5 left-5 bg-[#F9F8F6]/90 backdrop-blur-md px-3.5 py-1.5 border border-[#E5E2DC] text-[10px] tracking-[0.2em] uppercase font-sans text-[#0B0B0C] shadow-sm flex items-center space-x-1.5">
                 <Sparkles className="w-3 h-3 text-[#C5A880]" />
-                <span>Atelier Creation N° 042</span>
+                <span>Lagos Atelier Creation N° 01</span>
               </div>
 
               {/* Bottom Editorial Caption Card */}
-              <div className="absolute bottom-5 left-5 right-5 bg-[#0B0B0C]/85 backdrop-blur-md p-4 text-[#F9F8F6] border border-white/10">
-                <div className="flex items-center justify-between text-[10px] tracking-[0.16em] uppercase text-[#C5A880] mb-1">
-                  <span>Haute Couture Silhouette</span>
-                  <span>100% Bespoke Fit</span>
+              <div className="absolute bottom-5 left-5 right-5 bg-[#0B0B0C]/90 backdrop-blur-md p-4 text-[#F9F8F6] border border-white/10">
+                <div className="flex items-center justify-between text-[10px] tracking-[0.16em] uppercase text-[#C5A880] mb-1 font-sans">
+                  <span>Grand Imperial Cut</span>
+                  <span>Authentic Aso-Oke</span>
                 </div>
                 <p className="font-serif text-base text-[#F9F8F6] font-normal leading-snug">
-                  The Sculpted Wool Crepe Trench
+                  The Sovereign Corded Agbada Ensemble
                 </p>
                 <p className="text-[11px] text-[#F9F8F6]/70 font-sans mt-0.5">
-                  AI silhouette generation with Savile Row master tailoring
+                  Hand-loomed Iseyin raw silk with tonal cordon embroidery & bespoke fila
                 </p>
               </div>
             </div>
